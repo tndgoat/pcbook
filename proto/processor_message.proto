@@ -8,6 +8,8 @@ package pcbook.v1;
 // <import_path>;<package_name>
 option go_package = "github.com/tndgoat/pcbook/pb;pb";
 
+import "memory_message.proto";
+
 message CPU {
   string brand = 1;
   string name = 2;
@@ -15,4 +17,12 @@ message CPU {
   uint32 number_threads = 4;
   double min_ghz = 5;
   double max_ghz = 6;
+}
+
+message GPU {
+  string brand = 1;
+  string name = 2;
+  double min_ghz = 3;
+  double max_ghz = 4;
+  Memory memory = 5;
 }
