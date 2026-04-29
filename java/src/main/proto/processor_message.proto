@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+// protobuf package
+// <domain>.<version>
+package pcbook.v1;
+
+// MOST IMPORTANT with Go
+// <import_path>;<package_name>
+option go_package = "github.com/tndgoat/pcbook/pb;pb";
+
+// Java-specific options
+option java_package = "com.github.tndgoat.pcbook.db";
+option java_multiple_files = true;
+
+import "memory_message.proto";
+
+message CPU {
+  string brand = 1;
+  string name = 2;
+  uint32 number_cores = 3;
+  uint32 number_threads = 4;
+  double min_ghz = 5;
+  double max_ghz = 6;
+}
+
+message GPU {
+  string brand = 1;
+  string name = 2;
+  double min_ghz = 3;
+  double max_ghz = 4;
+  Memory memory = 5;
+}
