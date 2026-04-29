@@ -222,7 +222,8 @@ const file_laptop_message_proto_rawDesc = "" +
 	"\frelease_year\x18\r \x01(\rR\vreleaseYear\x129\n" +
 	"\n" +
 	"updated_at\x18\x0e \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtB\b\n" +
-	"\x06weightB!Z\x1fgithub.com/tndgoat/pcbook/pb;pbb\x06proto3"
+	"\x06weightBA\n" +
+	"\x1ccom.github.tndgoat.pcbook.dbP\x01Z\x1fgithub.com/tndgoat/pcbook/pb;pbb\x06proto3"
 
 var (
 	file_laptop_message_proto_rawDescOnce sync.Once

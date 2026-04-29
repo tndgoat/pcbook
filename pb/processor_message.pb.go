@@ -201,7 +201,8 @@ const file_processor_message_proto_rawDesc = "" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x17\n" +
 	"\amin_ghz\x18\x03 \x01(\x01R\x06minGhz\x12\x17\n" +
 	"\amax_ghz\x18\x04 \x01(\x01R\x06maxGhz\x12)\n" +
-	"\x06memory\x18\x05 \x01(\v2\x11.pcbook.v1.MemoryR\x06memoryB!Z\x1fgithub.com/tndgoat/pcbook/pb;pbb\x06proto3"
+	"\x06memory\x18\x05 \x01(\v2\x11.pcbook.v1.MemoryR\x06memoryBA\n" +
+	"\x1ccom.github.tndgoat.pcbook.dbP\x01Z\x1fgithub.com/tndgoat/pcbook/pb;pbb\x06proto3"
 
 var (
 	file_processor_message_proto_rawDescOnce sync.Once

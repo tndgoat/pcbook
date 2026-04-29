@@ -149,7 +149,8 @@ const file_memory_message_proto_rawDesc = "" +
 	"\bKILOBYTE\x10\x03\x12\f\n" +
 	"\bMEGABYTE\x10\x04\x12\f\n" +
 	"\bGIGABYTE\x10\x05\x12\f\n" +
-	"\bTERABYTE\x10\x06B!Z\x1fgithub.com/tndgoat/pcbook/pb;pbb\x06proto3"
+	"\bTERABYTE\x10\x06BA\n" +
+	"\x1ccom.github.tndgoat.pcbook.dbP\x01Z\x1fgithub.com/tndgoat/pcbook/pb;pbb\x06proto3"
 
 var (
 	file_memory_message_proto_rawDescOnce sync.Once
