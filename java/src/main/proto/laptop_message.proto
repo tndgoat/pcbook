@@ -5,7 +5,7 @@ package pcbook.v1;
 option go_package = "github.com/tndgoat/pcbook/pb;pb";
 
 // Java-specific options
-option java_package = "com.github.tndgoat.pcbook.db";
+option java_package = "com.github.tndgoat.pcbook.pb";
 option java_multiple_files = true;
 
 import "processor_message.proto";
