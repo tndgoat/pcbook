@@ -1,0 +1,12 @@
+version: v2
+plugins:
+  # Plugin sinh structs dữ liệu Go
+  - remote: buf.build/protocolbuffers/go
+    out: gen
+    opt:
+      - paths=source_relative
+  # Plugin sinh gRPC client/server Go
+  - remote: buf.build/grpc/go
+    out: gen
+    opt:
+      - paths=source_relative

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package todo.v1;
+
+option go_package = "my-project/gen/todo/v1;todov1";
+
+message Todo {
+  string id = 1;
+  string title = 2;
+  bool completed = 3;
+}
+
+message GetTodoRequest {
+  string id = 1;
+}
+
+message GetTodoResponse {
+  Todo todo = 1;
+}
+
+service TodoService {
+  rpc GetTodo(GetTodoRequest) returns (GetTodoResponse);
+}
