@@ -1,57 +1,46 @@
 plugins {
-    id "com.google.protobuf" version "0.10.0"
     id 'java'
+    id 'com.google.protobuf' version '0.10.0'
 }
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
+
+def grpcVersion = '1.84.0'
+def protobufVersion = '4.36.2'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    // Protobuf
+    implementation "com.google.protobuf:protobuf-java:${protobufVersion}"
+    implementation "com.google.protobuf:protobuf-java-util:${protobufVersion}"
+
+    // gRPC
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    implementation "io.grpc:grpc-netty-shaded:${grpcVersion}"
+
+    // Annotation support for generated files on Java 9+
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
+
+    // Testing
     testImplementation platform('org.junit:junit-bom:6.0.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-    // Source: https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
-    implementation("com.google.protobuf:protobuf-java:4.36.2")
-
-    // Source: https://mvnrepository.com/artifact/io.grpc/grpc-all
-    implementation("io.grpc:grpc-all:1.84.0")
-}
-
-sourceSets {
-    main {
-        java {
-            srcDirs 'build/generated/source/proto/main/grpc'
-            srcDirs 'build/generated/source/proto/main/java'
-        }
-    }
 }
 
 protobuf {
-    // Configure the protoc executable
     protoc {
-        // Download from repositories
-        artifact = 'com.google.protobuf:protoc:4.36.2'
+        artifact = "com.google.protobuf:protoc:${protobufVersion}"
     }
-
-    // Locate the codegen plugins
     plugins {
-        // Locate a plugin with name 'grpc'. This step is optional.
-        // If you leave it empty, it uses the current directory.
-        // If you don't specify it, protoc will try to use "protoc-gen-grpc" from
-        // system search path.
         grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java:1.84.0'
-            // or
-            // path = 'tools/protoc-gen-grpc-java'
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
         }
-        // Any other plugins
     }
-
     generateProtoTasks {
         all()*.plugins {
             grpc {}
