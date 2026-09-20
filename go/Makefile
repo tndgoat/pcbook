@@ -34,4 +34,10 @@ clean:
 run:
 	go run main.go
 
-.PHONY: proto clean run
+# =====================
+# Test
+# =====================
+test:
+	go test -cover -race ./...
+
+.PHONY: proto clean run test
