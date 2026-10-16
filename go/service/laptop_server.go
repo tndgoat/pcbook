@@ -13,6 +13,7 @@ import (
 
 // LaptopServer is the server that provides laptop services.
 type LaptopServer struct {
+	pb.UnimplementedLaptopServiceServer
 	Store LaptopStore
 }
 

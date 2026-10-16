@@ -11,6 +11,7 @@ import (
 	"github.com/tndgoat/pcbook/serializer"
 	"github.com/tndgoat/pcbook/service"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 func TestClientCreateLaptop(t *testing.T) {
@@ -57,7 +58,7 @@ func startTestLaptopServer(t *testing.T) (*service.LaptopServer, string) {
 }
 
 func newTestLaptopClient(t *testing.T, serverAddress string) pb.LaptopServiceClient {
-	conn, err := grpc.Dial(serverAddress, grpc.WithInsecure())
+	conn, err := grpc.NewClient(serverAddress, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	require.NoError(t, err)
 
 	return pb.NewLaptopServiceClient(conn)
