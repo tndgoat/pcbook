@@ -1,61 +1,62 @@
 {
-  "id": "2685cd46-d904-4b56-a5ba-bd40219d94a3",
-  "brand": "Lenovo",
-  "name": "Thinkpad P1",
-  "cpu": {
-    "brand": "AMD",
-    "name": "Ryzen 5 PRO 3500U",
-    "number_cores": 7,
-    "number_threads": 7,
-    "min_ghz": 2.0890311092003437,
-    "max_ghz": 2.6399587105963738
+  "id":  "d8cc70c0-717c-44b6-ae0f-e937802edbee",
+  "brand":  "Dell",
+  "name":  "XPS",
+  "cpu":  {
+    "brand":  "Intel",
+    "name":  "Core i5-9400F",
+    "number_cores":  2,
+    "number_threads":  8,
+    "min_ghz":  3.1461572989924944,
+    "max_ghz":  3.8962399837950565
   },
-  "ram": {
-    "value": "22",
-    "unit": "GIGABYTE"
+  "ram":  {
+    "value":  "64",
+    "unit":  "GIGABYTE"
   },
-  "gpus": [
+  "gpus":  [
     {
-      "brand": "AMD",
-      "name": "RX Vega-56",
-      "min_ghz": 1.1028308035344905,
-      "max_ghz": 1.595930475545498,
-      "memory": {
-        "value": "3",
-        "unit": "GIGABYTE"
+      "brand":  "AMD",
+      "name":  "RX 590",
+      "min_ghz":  1.0657276386011452,
+      "max_ghz":  1.9279158050000786,
+      "memory":  {
+        "value":  "5",
+        "unit":  "GIGABYTE"
       }
     }
   ],
-  "storages": [
+  "storages":  [
     {
-      "driver": "SSD",
-      "memory": {
-        "value": "829",
-        "unit": "GIGABYTE"
+      "driver":  "SSD",
+      "memory":  {
+        "value":  "665",
+        "unit":  "GIGABYTE"
       }
     },
     {
-      "driver": "HDD",
-      "memory": {
-        "value": "5",
-        "unit": "TERABYTE"
+      "driver":  "HDD",
+      "memory":  {
+        "value":  "1",
+        "unit":  "TERABYTE"
       }
     }
   ],
-  "screen": {
-    "size_inch": 13.0082855,
-    "resolution": {
-      "width": 6421,
-      "height": 3612
+  "screen":  {
+    "size_inch":  15.755295,
+    "resolution":  {
+      "width":  6444,
+      "height":  3625
     },
-    "panel": "IPS"
+    "panel":  "OLED",
+    "multitouch":  true
   },
-  "keyboard": {
-    "layout": "QWERTZ",
-    "backlit": true
+  "keyboard":  {
+    "layout":  "QWERTZ",
+    "backlit":  true
   },
-  "weight_kg": 2.5907178935687636,
-  "price_usd": 1655.1373227758359,
-  "release_year": 2024,
-  "updated_at": "2026-09-20T13:56:10.894858Z"
+  "weight_kg":  1.377913500109869,
+  "price_usd":  1642.6398497745456,
+  "release_year":  2023,
+  "updated_at":  "2026-10-20T09:56:09.563393353Z"
 }
