@@ -1,31 +1,34 @@
-# Define phony targets to prevent conflicts with files of the same name
-.PHONY: all permission clean-build fast-build boot-jar clean run
+.PHONY: clean build server client proto test
 
-# Default target when running just 'make'
-all: permission clean-build
-
-# Give execution permission to the Gradle wrapper (required on Linux/Ubuntu)
-permission:
-	@echo "Enabling execution permission for gradlew..."
+# Generate Protobuf code only (useful when you update .proto files and want IDE suggestions)
+proto:
+	@echo "Generating Protobuf files..."
 	chmod +x gradlew
+	./gradlew generateProto
 
-# Clean old build artifacts and rebuild the entire project (includes tests)
-clean-build: permission
-	./gradlew clean build
+# Grant execution permission and build the project (skip tests for faster build)
+build:
+	@echo "Building the project..."
+	chmod +x gradlew
+	./gradlew clean build -x test
 
-# Fast build by skipping all unit tests
-fast-build: permission
-	./gradlew build -x test
-
-# Build executable JAR specifically for Spring Boot applications
-boot-jar: permission
-	./gradlew bootJar
-
-# Remove the 'build' directory and clear cache
+# Clean up old build files
 clean:
+	@echo "Cleaning old files..."
 	./gradlew clean
 
-# Run the compiled JAR file automatically from the build directory
-run:
-	@echo "Launching the application..."
-	java -jar build/libs/*.jar
+# Start gRPC Server using Java (Ready to receive requests from Java or Go Client)
+server:
+	@echo "Starting Java Server..."
+	./gradlew runServer
+
+# Run gRPC Client using Java (Call to Java or Go Server)
+client:
+	@echo "Running Java Client..."
+	./gradlew runClient
+
+# Run unit tests
+test:
+	@echo "Running unit tests..."
+	chmod +x gradlew
+	./gradlew test

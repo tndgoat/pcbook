@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'com.google.protobuf' version '0.10.0'
+    id 'com.google.protobuf' version '0.9.4'
 }
 
 group = 'org.example'
@@ -26,10 +26,13 @@ dependencies {
     // Annotation support for generated files on Java 9+
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
 
-    // Testing
-    testImplementation platform('org.junit:junit-bom:6.0.0')
+    // Testing (Using JUnit 5 and gRPC Testing dependencies)
+    testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    
+    testImplementation "io.grpc:grpc-testing:${grpcVersion}"
+    testImplementation "io.grpc:grpc-inprocess:${grpcVersion}"
 }
 
 protobuf {
@@ -50,4 +53,18 @@ protobuf {
 
 test {
     useJUnitPlatform()
+}
+
+// Configuration to run LaptopServer
+task runServer(type: JavaExec) {
+    group = "application"
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.github.tndgoat.pcbook.service.LaptopServer'
+}
+
+// Configuration to run LaptopClient
+task runClient(type: JavaExec) {
+    group = "application"
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.github.tndgoat.pcbook.service.LaptopClient'
 }
