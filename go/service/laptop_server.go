@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"log"
+	"time"
 
 	"github.com/google/uuid"
 	"github.com/tndgoat/pcbook/pb"
@@ -29,6 +30,9 @@ func (server *LaptopServer) CreateLaptop(
 	ctx context.Context,
 	req *pb.CreateLaptopRequest,
 ) (*pb.CreateLaptopResponse, error) {
+	// ctx, cancel := context.WithTimeout(ctx, 5*time.Second)
+	// defer cancel()
+
 	laptop := req.GetLaptop()
 	log.Printf("Received a request to create a laptop with ID: %s", laptop.GetId())
 
@@ -51,6 +55,22 @@ func (server *LaptopServer) CreateLaptop(
 			)
 		}
 		laptop.Id = id.String()
+	}
+
+	// some heavy processing
+	// time.Sleep(4 * time.Second)
+	time.Sleep(6 * time.Second)
+
+	log.Print(ctx.Err())
+
+	if ctx.Err() == context.Canceled {
+		log.Print("request is canceled")
+		return nil, status.Error(codes.Canceled, "request is canceled")
+	}
+
+	if ctx.Err() == context.DeadlineExceeded {
+		log.Print("deadline is exceeded")
+		return nil, status.Error(codes.DeadlineExceeded, "deadline is exceeded")
 	}
 
 	// Save the laptop to the store.

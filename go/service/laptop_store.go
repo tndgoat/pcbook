@@ -33,6 +33,7 @@ func NewInMemoryLaptopStore() *InMemoryLaptopStore {
 	}
 }
 
+// Save saves a laptop to the in-memory store.
 func (store *InMemoryLaptopStore) Save(laptop *pb.Laptop) error {
 	store.mutex.Lock()
 	defer store.mutex.Unlock()

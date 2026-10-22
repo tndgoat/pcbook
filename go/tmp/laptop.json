@@ -1,27 +1,27 @@
 {
-  "id":  "d8cc70c0-717c-44b6-ae0f-e937802edbee",
+  "id":  "a37ef68d-df86-439b-8962-72d8c56465c2",
   "brand":  "Dell",
-  "name":  "XPS",
+  "name":  "Latitude",
   "cpu":  {
-    "brand":  "Intel",
-    "name":  "Core i5-9400F",
-    "number_cores":  2,
-    "number_threads":  8,
-    "min_ghz":  3.1461572989924944,
-    "max_ghz":  3.8962399837950565
+    "brand":  "AMD",
+    "name":  "Ryzen 3 PRO 3200GE",
+    "number_cores":  6,
+    "number_threads":  6,
+    "min_ghz":  2.9141404034180787,
+    "max_ghz":  4.953491769167188
   },
   "ram":  {
-    "value":  "64",
+    "value":  "26",
     "unit":  "GIGABYTE"
   },
   "gpus":  [
     {
-      "brand":  "AMD",
-      "name":  "RX 590",
-      "min_ghz":  1.0657276386011452,
-      "max_ghz":  1.9279158050000786,
+      "brand":  "NVIDIA",
+      "name":  "GTX 1070",
+      "min_ghz":  1.2342337609773417,
+      "max_ghz":  1.3119777375807629,
       "memory":  {
-        "value":  "5",
+        "value":  "6",
         "unit":  "GIGABYTE"
       }
     }
@@ -30,33 +30,32 @@
     {
       "driver":  "SSD",
       "memory":  {
-        "value":  "665",
+        "value":  "654",
         "unit":  "GIGABYTE"
       }
     },
     {
       "driver":  "HDD",
       "memory":  {
-        "value":  "1",
+        "value":  "6",
         "unit":  "TERABYTE"
       }
     }
   ],
   "screen":  {
-    "size_inch":  15.755295,
+    "size_inch":  15.799673,
     "resolution":  {
-      "width":  6444,
-      "height":  3625
+      "width":  6108,
+      "height":  3436
     },
-    "panel":  "OLED",
-    "multitouch":  true
+    "panel":  "OLED"
   },
   "keyboard":  {
-    "layout":  "QWERTZ",
+    "layout":  "QWERTY",
     "backlit":  true
   },
-  "weight_kg":  1.377913500109869,
-  "price_usd":  1642.6398497745456,
-  "release_year":  2023,
-  "updated_at":  "2026-10-20T09:56:09.563393353Z"
+  "weight_kg":  1.5225364779328499,
+  "price_usd":  2210.8982006669053,
+  "release_year":  2024,
+  "updated_at":  "2026-10-21T09:52:30.048436329Z"
 }

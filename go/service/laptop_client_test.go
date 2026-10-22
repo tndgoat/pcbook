@@ -61,6 +61,10 @@ func newTestLaptopClient(t *testing.T, serverAddress string) pb.LaptopServiceCli
 	conn, err := grpc.NewClient(serverAddress, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	require.NoError(t, err)
 
+	t.Cleanup(func() {
+		conn.Close()
+	})
+
 	return pb.NewLaptopServiceClient(conn)
 }
 
