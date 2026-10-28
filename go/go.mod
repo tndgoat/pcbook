@@ -4,13 +4,13 @@ go 1.27
 
 require (
 	github.com/google/uuid v1.6.0
+	github.com/jinzhu/copier v0.4.0
 	github.com/stretchr/testify v1.12.1
 	google.golang.org/grpc v1.84.0
 	google.golang.org/protobuf v1.36.11
 )
 
 require (
-	github.com/jinzhu/copier v0.4.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/net v0.57.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect

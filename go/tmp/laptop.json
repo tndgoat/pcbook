@@ -1,27 +1,27 @@
 {
-  "id":  "a37ef68d-df86-439b-8962-72d8c56465c2",
+  "id":  "dd0e97e9-997b-4e79-94a0-4fa974e19ae0",
   "brand":  "Dell",
   "name":  "Latitude",
   "cpu":  {
     "brand":  "AMD",
-    "name":  "Ryzen 3 PRO 3200GE",
-    "number_cores":  6,
-    "number_threads":  6,
-    "min_ghz":  2.9141404034180787,
-    "max_ghz":  4.953491769167188
+    "name":  "Ryzen 5 PRO 3500U",
+    "number_cores":  7,
+    "number_threads":  11,
+    "min_ghz":  3.3811149074300326,
+    "max_ghz":  4.733469051008742
   },
   "ram":  {
-    "value":  "26",
+    "value":  "10",
     "unit":  "GIGABYTE"
   },
   "gpus":  [
     {
       "brand":  "NVIDIA",
-      "name":  "GTX 1070",
-      "min_ghz":  1.2342337609773417,
-      "max_ghz":  1.3119777375807629,
+      "name":  "RTX 2070",
+      "min_ghz":  1.4141083387769007,
+      "max_ghz":  1.9161276672584913,
       "memory":  {
-        "value":  "6",
+        "value":  "3",
         "unit":  "GIGABYTE"
       }
     }
@@ -30,32 +30,33 @@
     {
       "driver":  "SSD",
       "memory":  {
-        "value":  "654",
+        "value":  "811",
         "unit":  "GIGABYTE"
       }
     },
     {
       "driver":  "HDD",
       "memory":  {
-        "value":  "6",
+        "value":  "2",
         "unit":  "TERABYTE"
       }
     }
   ],
   "screen":  {
-    "size_inch":  15.799673,
+    "size_inch":  14.58172,
     "resolution":  {
-      "width":  6108,
-      "height":  3436
+      "width":  7427,
+      "height":  4178
     },
-    "panel":  "OLED"
+    "panel":  "OLED",
+    "multitouch":  true
   },
   "keyboard":  {
     "layout":  "QWERTY",
     "backlit":  true
   },
-  "weight_kg":  1.5225364779328499,
-  "price_usd":  2210.8982006669053,
-  "release_year":  2024,
-  "updated_at":  "2026-10-21T09:52:30.048436329Z"
+  "weight_kg":  1.2815204546820815,
+  "price_usd":  2586.289842218263,
+  "release_year":  2023,
+  "updated_at":  "2026-10-28T10:23:18.380832546Z"
 }

@@ -64,7 +64,7 @@ func TestServerCreateLaptop(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			t.Parallel()
 
-			server := service.NewLaptopServer(tc.store)
+			server := service.NewLaptopServer(tc.store, nil)
 			req := &pb.CreateLaptopRequest{
 				Laptop: tc.laptop,
 			}
