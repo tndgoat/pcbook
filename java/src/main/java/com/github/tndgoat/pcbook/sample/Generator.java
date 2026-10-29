@@ -135,6 +135,10 @@ public class Generator {
                 .build();
     }
 
+    public double NewLaptopScore() {
+        return randomInt(1, 10);
+    }
+
     private String randomLaptopName(String brand) {
         switch (brand) {
             case "Apple":
