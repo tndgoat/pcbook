@@ -1,4 +1,4 @@
-.PHONY: clean build server client proto test
+.PHONY: clean build server client proto test evans
 
 # Generate Protobuf code only (useful when you update .proto files and want IDE suggestions)
 proto:
@@ -32,3 +32,7 @@ test:
 	@echo "Running unit tests..."
 	chmod +x gradlew
 	./gradlew test
+
+# Evans: more expressive universal gRPC client
+evans:
+	evans -r repl -p 8080

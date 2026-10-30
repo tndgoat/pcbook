@@ -22,6 +22,7 @@ dependencies {
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"
     implementation "io.grpc:grpc-netty-shaded:${grpcVersion}"
+    implementation "io.grpc:grpc-services:${grpcVersion}" // gRPC Reflection
 
     // Annotation support for generated files on Java 9+
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
