@@ -43,4 +43,10 @@ client:
 test:
 	go test -cover -race ./...
 
-.PHONY: proto clean run test
+# =====================
+# Evans
+# =====================
+evans:
+	evans -r repl -p 8080
+
+.PHONY: proto clean run test evans
