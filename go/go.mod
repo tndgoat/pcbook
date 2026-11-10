@@ -3,9 +3,11 @@ module github.com/tndgoat/pcbook
 go 1.27
 
 require (
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/google/uuid v1.6.0
 	github.com/jinzhu/copier v0.4.0
 	github.com/stretchr/testify v1.12.1
+	golang.org/x/crypto v0.54.0
 	google.golang.org/grpc v1.84.0
 	google.golang.org/protobuf v1.36.11
 )

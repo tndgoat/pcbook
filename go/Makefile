@@ -49,4 +49,4 @@ test:
 evans:
 	evans -r repl -p 8080
 
-.PHONY: proto clean run test evans
+.PHONY: proto clean server client test evans
